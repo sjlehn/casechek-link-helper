@@ -1,0 +1,13 @@
+{
+  "name": "Casechek Link Helper",
+  "description": "Provides easy shortcuts for testing tickets",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/casechek-logo.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+}
