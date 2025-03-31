@@ -8,6 +8,7 @@ function documentEvents() {
         paymentLocal: "http://localhost:3400/api",
         catalogLocal: "http://localhost:3500/api",
         hospitalLocal: "http://localhost:4200",
+        bobLocal: "http://localhost:3000/docs",
         surgeryDev: "http://casechek-dev-surgery-service.casechek-test.com/api",
         surgeryStaging: "http://casechek-staging-surgery-service.casechek-test.com/api",
         platformDev: "http://casechek-dev-platform-management.casechek-test.com/api",
@@ -18,6 +19,8 @@ function documentEvents() {
         hospitalStaging: "http://hospital-staging.casechek-test.com/api",
         catalogDev: "http://casechek-dev-catalog-service.casechek-test.com/api",
         catalogStaging: "http://casechek-staging-catalog-service.casechek-test.com/api",
+        bobDev: "https://bob-develop.casechek-test.com/docs",
+        bobStaging: "https://bob-staging.casechek-test.com/docs",
     };
 
     document.getElementById('surgeryPr').addEventListener('click', () => {
@@ -57,6 +60,14 @@ function documentEvents() {
     
         chrome.tabs.create({
             url: `https://hospital-pr-${prNum}.casechek-test.com/`
+        })
+    })
+
+    document.getElementById('bobPr').addEventListener('click', () => {
+        const prNum = document.getElementById('prNum').value;
+    
+        chrome.tabs.create({
+            url: `https://bob-${prNum}.casechek-test.com/docs`
         })
     })
 
